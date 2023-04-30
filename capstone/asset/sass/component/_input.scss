@@ -1,0 +1,14 @@
+.inputEdit{
+    width: 482px;
+                    height: 51px;
+                    position: relative;margin-top:15px;
+                    &::placeholder{
+                        @include textNormal($fs-3xl,$fw-regular,$fc-dark,)
+                    }
+                    &{outline: none;
+                        border-top:none;border-left: none;border-right: none;border-bottom: 5px solid $bg-purple
+
+                    }
+                   
+                    margin-right: 60px;
+                    }

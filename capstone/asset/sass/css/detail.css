@@ -41,6 +41,14 @@
   height: 64px;
 }
 
+.btnSubmit {
+  background: #AE18E2;
+  border: none;
+  border-radius: 0px;
+  width: 291px;
+  height: 50px;
+}
+
 body .container .product-detail {
   position: relative;
   width: 1280px;
