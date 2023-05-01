@@ -3,21 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-.nav{
+
+.nav {
     background-color: #000000;
 }
-.nav img{
+
+.nav img {
     width: 116px;
     height: 32px;
     left: 24px;
     top: 10px;
 
 }
-.nav i{
+
+.nav i {
     margin-left: 914px;
     color: aliceblue;
 }
-.nav a{
+
+.nav a {
     color: aliceblue;
 }
 
@@ -25,7 +29,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: ;
     height: 50px;
 }
 
@@ -47,23 +50,101 @@ a {
     text-decoration: none;
 }
 
-.nav a:hover{
+.nav a:hover {
     text-decoration: underline;
 }
-.nav-menu a:hover{
+
+.nav-menu a:hover {
     text-decoration: underline;
 }
+
 /*collection*/
-.container {
+.collection h1 {
+    text-align: center;
+}
+
+.product-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  .item {
-    width: calc(33.33% - 10px);
-    height: 150px;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.product {
+    position: relative;
+    width: 334px;
+    height: 369px;
+    margin-bottom: 50px;
+}
+
+.product-img {
+    background-color: #ddd;
+    width: 100%;
+    height: 250px;
+}
+
+.product-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.product-title {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.product-desc {
     margin-bottom: 20px;
-    background-color: #ccc;
-  }
-  
+    text-align: left;
+}
+
+.product-bottoms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-btn {
+    background-color: #E1B067;
+    border: none;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 175px;
+    height: 64px;
+    left: 0px;
+    top: 305px;
+
+    cursor: pointer;
+}
+
+.product-btns {
+    background-color: #DEDDDC;
+    border: none;
+    color:#000000;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 175px;
+    height: 64px;
+    left: 0px;
+    top: 305px;
+    cursor: pointer;
+}
+
+
+.product-btn:hover {
+    background-color: #3e8e41;
+}
+
+
+
+
+/*collection*/
