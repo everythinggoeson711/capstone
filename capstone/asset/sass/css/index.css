@@ -47,6 +47,11 @@
   border-radius: 0px;
   width: 291px;
   height: 50px;
+  transition: background 0.3s;
+}
+.btnSubmit:hover {
+  background-color: rgba(196, 134, 237, 0.97);
+  transition: all 0.3s;
 }
 
 .trianglePrev, body #carouselExampleCaptions .carousel-control-prev .carousel-control-prev-icon {
@@ -77,7 +82,7 @@ body #carouselExampleCaptions {
   position: relative;
   width: 1280px;
   height: 530px;
-  background-image: url(/asset/image/bgred.png);
+  background-image: url(/capstone/asset/image/bgred.png);
   background-repeat: no-repeat;
   background-size: 1317px 393px;
   background-position: top 107px left -22px;
@@ -125,9 +130,9 @@ body #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .
 }
 body #carouselExampleCaptions .carousel-control-prev .carousel-control-prev-icon {
   background-image: none;
-  background-color: red;
+  background-color: lightgoldenrodyellow;
 }
 body #carouselExampleCaptions .carousel-control-next .carousel-control-next-icon {
   background-image: none;
-  background-color: red;
+  background-color: lightgoldenrodyellow;
 }

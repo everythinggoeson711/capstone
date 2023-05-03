@@ -9,42 +9,111 @@ padding:0;
 box-sizing: border-box;}
 
 body{   
-    form{text-align: center;
-        h1{
-            @include textNormal($fs-4xl,$fw-regular,$fc-dark,);margin-bottom: 40px;
-        }
-        table{
-            .tr-1{ 
-                td{
-                    
-                    input{position: relative;
-                        @extend .inputEdit;
-                    }
-
-                }
+    form{
+        .container{text-align: center   ;
+            h1{ 
+                @include textNormal($fs-4xl,$fw-regular,$fc-dark,);margin-bottom: 40px;
             }
-            .tr-2{
+            table{ line-height: 1.5;
+                p{text-align: start;}
+                .tr-1{ 
+                    td{
+                        
+                        input{position: relative;
+                            @extend .inputEdit;
+                        }
+    
+                    }
+                }
+                .tr-2{
+                    td{
+                       
+                        input{
+                            @extend .inputEdit;
+                        }
+                        p{
+                            width: 90%;
+                        }
+                    }
+                }
+                .tr-3{
+                   
+                    td:nth-child(1){
+                        
+                        input{
+                            @extend .inputEdit;
+                        }
+                    }
+                    td:nth-child(2){padding-top: 45px;
+                       display:flex;@include textNormal($fs-3xl,$fw-regular,$fc-dark,);@extend .editInput;
+                       .btnrd{
+                        display: flex;
+                       }
+                    }
+                        
+                        
+            }
+            
+            @media only screen and (max-width:768px) {
+                margin-left: 40px;
+              .tr-1{display: flex;
+                flex-direction:column;
+                    td{
+                        input{
+                            @include inputResponsive;
+                        }
+                    }
+        
+            }
+              .tr-2{display: flex;
+                flex-direction:column-reverse;
                 td{
-                    padding-top: 25px;
                     input{
-                        @extend .inputEdit;
+                        @include inputResponsive;
                     }
                 }
             }
-            .tr-3{margin-top:40px;
+              .tr-3{display: flex;
+                flex-direction:column;
+                position: relative;
                 td:nth-child(1){
-                    
                     input{
-                        @extend .inputEdit;
+                        @include inputResponsive;
                     }
                 }
-                td:nth-child(2){padding-top: 45px;
-                   display:flex;@include textNormal($fs-3xl,$fw-regular,$fc-dark,);
+                td:nth-child(2){ display: flex;padding-top: 0px;
+                    flex-direction: columns;position: relative;padding-left: 85px;
+                    p{font-weight: $fw-medium;}
+                    .btnrd{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        left: -60px;
+                        bottom: -70px;
+                        .buttonRadio{
+                            margin-top: 10px;
+                        }
+                    }
+                   
                 }
-                    @extend .editInput;
-                    
+            }          
+            
+                
+            }
+            @media only screen and (max-width:576px) {
+                
+            }
         }
-    }
+            .btnsubmit{ 
+                margin-left:240px;
+                margin-top:40px;
+                @include textNormal($fs-3xl,$fw-regular,$fc-light,);
+                @extend .btnSubmit;
+                @media only screen and (max-width:768px) {
+                    margin-top: 100px;
+                    margin-left: 0px;
+                }
+            }}
 }
     }
            
