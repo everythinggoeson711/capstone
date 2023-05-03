@@ -41,28 +41,33 @@
   height: 64px;
 }
 
-.btnSubmit {
+.btnSubmit, body form .container .btnsubmit {
   background: #AE18E2;
   border: none;
   border-radius: 0px;
   width: 291px;
   height: 50px;
+  transition: background 0.3s;
+}
+.btnSubmit:hover, body form .container .btnsubmit:hover {
+  background-color: rgba(196, 134, 237, 0.97);
+  transition: all 0.3s;
 }
 
-.inputEdit, body form table .tr-3 td:nth-child(1) input, body form table .tr-2 td input, body form table .tr-1 td input {
+.inputEdit, body form .container table .tr-3 td:nth-child(1) input, body form .container table .tr-2 td input, body form .container table .tr-1 td input {
   width: 482px;
   height: 51px;
   position: relative;
   margin-top: 15px;
   margin-right: 60px;
 }
-.inputEdit::placeholder, body form table .tr-3 td:nth-child(1) input::placeholder, body form table .tr-2 td input::placeholder, body form table .tr-1 td input::placeholder {
+.inputEdit::placeholder, body form .container table .tr-3 td:nth-child(1) input::placeholder, body form .container table .tr-2 td input::placeholder, body form .container table .tr-1 td input::placeholder {
   font-size: 30px;
   font-weight: 400;
   color: #140101;
   font-family: "Inter";
 }
-.inputEdit, body form table .tr-3 td:nth-child(1) input, body form table .tr-2 td input, body form table .tr-1 td input {
+.inputEdit, body form .container table .tr-3 td:nth-child(1) input, body form .container table .tr-2 td input, body form .container table .tr-1 td input {
   outline: none;
   border-top: none;
   border-left: none;
@@ -70,17 +75,17 @@
   border-bottom: 5px solid #AE18E2;
 }
 
-.editInput .buttonRadio, body form table .tr-3 .buttonRadio {
+.editInput .buttonRadio, body form .container table .tr-3 td:nth-child(2) .buttonRadio {
   display: block;
   position: relative;
   width: 19%;
   margin: 0 auto;
 }
-.editInput .buttonRadio input[type=radio], body form table .tr-3 .buttonRadio input[type=radio] {
+.editInput .buttonRadio input[type=radio], body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio] {
   position: absolute;
   visibility: hidden;
 }
-.editInput .buttonRadio label, body form table .tr-3 .buttonRadio label {
+.editInput .buttonRadio label, body form .container table .tr-3 td:nth-child(2) .buttonRadio label {
   display: block;
   position: relative;
   font-size: 30px;
@@ -92,7 +97,7 @@
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
 }
-.editInput .buttonRadio .outer-circle, body form table .tr-3 .buttonRadio .outer-circle {
+.editInput .buttonRadio .outer-circle, body form .container table .tr-3 td:nth-child(2) .buttonRadio .outer-circle {
   display: block;
   position: absolute;
   border: 3px solid #D9D9D9;
@@ -105,7 +110,7 @@
   transition: border 0.25s linear;
   -webkit-transition: border 0.25s linear;
 }
-.editInput .buttonRadio .outer-circle:before, body form table .tr-3 .buttonRadio .outer-circle:before {
+.editInput .buttonRadio .outer-circle:before, body form .container table .tr-3 td:nth-child(2) .buttonRadio .outer-circle:before {
   display: block;
   position: absolute;
   content: "";
@@ -118,22 +123,22 @@
   transition: background 0.25s linear;
   -webkit-transition: background 0.25s linear;
 }
-.editInput .buttonRadio input[type=radio].circle-1 ~ .outer-circle, body form table .tr-3 .buttonRadio input[type=radio].circle-1 ~ .outer-circle {
+.editInput .buttonRadio input[type=radio].circle-1 ~ .outer-circle, body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio].circle-1 ~ .outer-circle {
   background-color: #D9D9D9;
 }
-.editInput .buttonRadio input[type=radio].circle-2 ~ .outer-circle, body form table .tr-3 .buttonRadio input[type=radio].circle-2 ~ .outer-circle {
+.editInput .buttonRadio input[type=radio].circle-2 ~ .outer-circle, body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio].circle-2 ~ .outer-circle {
   background-color: #D9D9D9;
 }
-.editInput .buttonRadio input[type=radio].circle-1checked ~ .outer-circle, body form table .tr-3 .buttonRadio input[type=radio].circle-1checked ~ .outer-circle {
+.editInput .buttonRadio input[type=radio].circle-1checked ~ .outer-circle, body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio].circle-1checked ~ .outer-circle {
   border: 3px solid #D9D9D9;
 }
-.editInput .buttonRadio input[type=radio].circle-1:checked ~ .outer-circle::before, body form table .tr-3 .buttonRadio input[type=radio].circle-1:checked ~ .outer-circle::before {
+.editInput .buttonRadio input[type=radio].circle-1:checked ~ .outer-circle::before, body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio].circle-1:checked ~ .outer-circle::before {
   background: #AE18E2;
 }
-.editInput .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle, body form table .tr-3 .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle {
+.editInput .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle, body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle {
   border: 3px solid #D9D9D9;
 }
-.editInput .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle::before, body form table .tr-3 .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle::before {
+.editInput .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle::before, body form .container table .tr-3 td:nth-child(2) .buttonRadio input[type=radio].circle-2:checked ~ .outer-circle::before {
   background: #AE18E2;
 }
 * {
@@ -142,30 +147,109 @@
   box-sizing: border-box;
 }
 
-body form {
+body form .container {
   text-align: center;
 }
-body form h1 {
+body form .container h1 {
   font-size: 40px;
   font-weight: 400;
   color: #140101;
   font-family: "Inter";
   margin-bottom: 40px;
 }
-body form table .tr-1 td input {
+body form .container table {
+  line-height: 1.5;
+}
+body form .container table p {
+  text-align: start;
+}
+body form .container table .tr-1 td input {
   position: relative;
 }
-body form table .tr-2 td {
-  padding-top: 25px;
+body form .container table .tr-2 td p {
+  width: 90%;
 }
-body form table .tr-3 {
-  margin-top: 40px;
-}
-body form table .tr-3 td:nth-child(2) {
+body form .container table .tr-3 td:nth-child(2) {
   padding-top: 45px;
   display: flex;
   font-size: 30px;
   font-weight: 400;
   color: #140101;
   font-family: "Inter";
+}
+body form .container table .tr-3 td:nth-child(2) .btnrd {
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  body form .container table {
+    margin-left: 40px;
+  }
+  body form .container table .tr-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  body form .container table .tr-1 td input {
+    width: 300px;
+    height: 40px;
+  }
+  body form .container table .tr-1 td input::placeholder {
+    text-align: center;
+  }
+  body form .container table .tr-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  body form .container table .tr-2 td input {
+    width: 300px;
+    height: 40px;
+  }
+  body form .container table .tr-2 td input::placeholder {
+    text-align: center;
+  }
+  body form .container table .tr-3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  body form .container table .tr-3 td:nth-child(1) input {
+    width: 300px;
+    height: 40px;
+  }
+  body form .container table .tr-3 td:nth-child(1) input::placeholder {
+    text-align: center;
+  }
+  body form .container table .tr-3 td:nth-child(2) {
+    display: flex;
+    padding-top: 0px;
+    flex-direction: columns;
+    position: relative;
+    padding-left: 85px;
+  }
+  body form .container table .tr-3 td:nth-child(2) p {
+    font-weight: 500;
+  }
+  body form .container table .tr-3 td:nth-child(2) .btnrd {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -60px;
+    bottom: -70px;
+  }
+  body form .container table .tr-3 td:nth-child(2) .btnrd .buttonRadio {
+    margin-top: 10px;
+  }
+}
+body form .container .btnsubmit {
+  margin-left: 240px;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: "Inter";
+}
+@media only screen and (max-width: 768px) {
+  body form .container .btnsubmit {
+    margin-top: 100px;
+    margin-left: 0px;
+  }
 }

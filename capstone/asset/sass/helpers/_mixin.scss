@@ -5,3 +5,11 @@
     color: $c;
     font-family: $ff;
 }
+@mixin inputResponsive(){
+
+    width: 300px;
+    height: 40px;
+    &::placeholder{
+        text-align: center;
+    }
+}
