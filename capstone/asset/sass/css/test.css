@@ -74,14 +74,18 @@ a {
 .product {
     position: relative;
     width: 334px;
-    height: 369px;
+    height: 500px;
     margin-bottom: 50px;
-}
+}   
 
 .product-img {
     background-color: #ddd;
     width: 100%;
-    height: 250px;
+    height: 300px
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
 }
 
 .product-info {
@@ -95,6 +99,7 @@ a {
 .product-title {
     margin-bottom: 10px;
     text-align: left;
+    font-size: 22px;
 }
 
 .product-desc {
