@@ -39,9 +39,9 @@ window.onload = function () {
                 </div>
                 <h3>${contentClick.price}</h3>
                 <div class="changethenumber">
-                    <button class="" id="btn-up">+</button>
-                    <span id="number"></span>
-                    <button class="" id="btn-down">-</button>
+                    <button class="" id="btnup" onclick="increase()">+</button>
+                    <input type="text" id="quantity" value="0" />
+                    <button class="" id="btndown" onclick="decrease()">-</button>
                 </div>
                 <button class="btn" id="btn-add-to-cart">Add to cart</button>
                 </div>
@@ -50,12 +50,27 @@ window.onload = function () {
     
     
                 `
-                
+                 
+               
                 document.querySelector('.container').innerHTML=display;
+                var currentNumb=+document.getElementById('quantity').value;
+            increase=function(){
+                numb=currentNumb+=1
+                document.getElementById('quantity').value=numb
+            decrease=function(){
+                
+                if (numb>0){
+                    numb=currentNumb-=1;
+                }
+                document.getElementById('quantity').value=numb;
+                
+
+            }
+            }
             })
             promise.catch(function(error){
                 console.log(error)
             })
     }
             
-        
+   

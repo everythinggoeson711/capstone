@@ -44,13 +44,19 @@ body{
                         }
                 }   
                 h3{@include textNormal($fs-3xl,$fw-semibold,$fc-red,);margin-top:20px;}
-                .changethenumber{
-                    #btn-up{
+                .changethenumber{display: flex;
+                    #btnup{
                         @include textNormal($fs-3xl,$fw-regular ,$fc-light , );
                         @extend .btnUpDown;
                     }
+                    input{ width: 50px;text-align: center;
+                    outline: none;
+                            border:none
+    
+                        
+                    }
                     #number{}
-                    #btn-down{
+                    #btndown{
                         @include textNormal($fs-3xl,$fw-regular ,$fc-light , );
                         @extend .btnUpDown;
                     }

@@ -26,7 +26,7 @@
   height: 50px;
 }
 
-.btnUpDown, body .container .product-detail .changethenumber #btn-down, body .container .product-detail .changethenumber #btn-up {
+.btnUpDown, body .container .product-detail .changethenumber #btndown, body .container .product-detail .changethenumber #btnup {
   background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
   border: none;
   width: 50px;
@@ -114,13 +114,22 @@ body .container .product-detail h3 {
   font-family: "Inter";
   margin-top: 20px;
 }
-body .container .product-detail .changethenumber #btn-up {
+body .container .product-detail .changethenumber {
+  display: flex;
+}
+body .container .product-detail .changethenumber #btnup {
   font-size: 30px;
   font-weight: 400;
   color: #ffffff;
   font-family: "Inter";
 }
-body .container .product-detail .changethenumber #btn-down {
+body .container .product-detail .changethenumber input {
+  width: 50px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+body .container .product-detail .changethenumber #btndown {
   font-size: 30px;
   font-weight: 400;
   color: #ffffff;
