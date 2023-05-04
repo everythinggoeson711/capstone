@@ -11,7 +11,8 @@ function displayRealateProduct(){
     })
 }
 
-function renderRelateProduct(arrRP){
+function getdata(){
+  function renderRelateProduct(arrRP){
     var category='';
     for (var index=0;index<arrRP.length;index++)
     {
@@ -33,5 +34,6 @@ function renderRelateProduct(arrRP){
         `
     }
     document.querySelector('#relateProduct').innerHTML=category;
+}
 }
 displayRealateProduct()

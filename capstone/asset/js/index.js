@@ -30,3 +30,4 @@ document.querySelector('#formSignUp').onsubmit=function(event)
         console.log(error)
     })
 }
+
