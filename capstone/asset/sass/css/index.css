@@ -139,3 +139,29 @@ body .carousel #carouselExampleCaptions .carousel-control-next .carousel-control
   background-image: none;
   background-color: lightgoldenrodyellow;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    width: 768px;
+  }
+  body .carousel #carouselExampleCaptions {
+    width: 768px;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-item {
+    position: relative;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-item img {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 70px;
+    left: 150px;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-next, body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-prev {
+    display: none;
+  }
+}

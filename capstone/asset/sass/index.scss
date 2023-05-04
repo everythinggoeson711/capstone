@@ -61,7 +61,33 @@ body{
     
                     
             }
+        
         }    
+       
+    }
+    @media only screen and (max-width:768px) {
+            width:768px;
+            .carousel{
+               #carouselExampleCaptions{width:768px;
+                    .carousel-inner{
+                        .carousel-item{position: relative;
+                            img{width: fit-content;
+                            height: fit-content;
+                        position: absolute;
+                    top:70px;left:150px}
+                                .carousel-caption{
+                                    position: absolute;
+                                    left:0;
+                                    top:30px
+                                }
+                        }
+                        .carousel-control-next,.carousel-control-prev{
+                            display: none;
+                        }
+                    }
+               }
+            }
+           
     }
     .collection{
 
