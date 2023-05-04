@@ -26,14 +26,14 @@
   height: 50px;
 }
 
-.btnUpDown, body .container .product-detail .changethenumber #btndown, body .container .product-detail .changethenumber #btnup {
+.btnUpDown, body .container .product-detail .detail .changethenumber #btndown, body .container .product-detail .detail .changethenumber #btnup {
   background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
   border: none;
   width: 50px;
   height: 50px;
 }
 
-.btnAdd2Cart, body .container .product-detail #btn-add-to-cart {
+.btnAdd2Cart, body .container .product-detail .detail #btn-add-to-cart {
   background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
   border: none;
   border-radius: 0px;
@@ -56,8 +56,10 @@
 
 body .container .product-detail {
   position: relative;
-  width: 1280px;
+  width: 1180px;
   height: 530px;
+  display: flex;
+  flex-direction: column;
 }
 body .container .product-detail .photo {
   position: absolute;
@@ -70,13 +72,13 @@ body .container .product-detail .photo {
 body .container .product-detail .photo img {
   position: absolute;
   width: 220px;
-  height: 156px;
+  height: 176px;
   left: 57px;
   top: 109px;
 }
 body .container .product-detail .detail {
   position: absolute;
-  width: 196px;
+  width: 300px;
   height: 36px;
   left: 527px;
   top: 67px;
@@ -107,38 +109,66 @@ body .container .product-detail .detail .catalogue-size .btnsize {
   color: #140101;
   font-family: "Inter";
 }
-body .container .product-detail h3 {
+body .container .product-detail .detail h3 {
   font-size: 30px;
   font-weight: 600;
   color: #FC0303;
   font-family: "Inter";
   margin-top: 20px;
 }
-body .container .product-detail .changethenumber {
+body .container .product-detail .detail .changethenumber {
   display: flex;
 }
-body .container .product-detail .changethenumber #btnup {
+body .container .product-detail .detail .changethenumber #btnup {
   font-size: 30px;
   font-weight: 400;
   color: #ffffff;
   font-family: "Inter";
 }
-body .container .product-detail .changethenumber input {
+body .container .product-detail .detail .changethenumber input {
   width: 50px;
   text-align: center;
   outline: none;
   border: none;
 }
-body .container .product-detail .changethenumber #btndown {
+body .container .product-detail .detail .changethenumber #btndown {
   font-size: 30px;
   font-weight: 400;
   color: #ffffff;
   font-family: "Inter";
 }
-body .container .product-detail #btn-add-to-cart {
+body .container .product-detail .detail #btn-add-to-cart {
   margin-top: 10px;
   font-size: 24px;
   font-weight: 500;
   color: #ffffff;
   font-family: "Inter";
+}
+@media only screen and (max-width: 768px) {
+  body .container {
+    width: 768px;
+    position: relative;
+  }
+  body .container .product-detail .photo .img {
+    width: 200px;
+    height: 150px;
+  }
+  body .container .product-detail .detail {
+    position: absolute;
+    top: 450px;
+    left: 30px;
+    width: 100%;
+  }
+  body .container .product-detail .detail .catalogue-size {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px;
+  }
+  body .container .product-detail .detail .catalogue-size .btnsize {
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  body .container .product-detail .detail h3 {
+    text-align: start;
+  }
 }

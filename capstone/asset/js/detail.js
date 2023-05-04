@@ -26,27 +26,26 @@ window.onload = function () {
                     `
                 }
                 var display='';
-                display=`<section class="product-detail">
-                <div class="photo">
-                    <img src="${contentClick.image}">
-                </div>
-                <div class="detail">
-                    <h1> ${contentClick.name}</h1>
-                   
-                    <span>Available size</span>
-                <div class="catalogue-size">
-                    ${displaySize}
-                </div>
-                <h3>${contentClick.price}</h3>
-                <div class="changethenumber">
-                    <button class="" id="btnup" onclick="increase()">+</button>
-                    <input type="text" id="quantity" value="0" />
-                    <button class="" id="btndown" onclick="decrease()">-</button>
-                </div>
-                <button class="btn" id="btn-add-to-cart">Add to cart</button>
-                </div>
-                
-            </section>
+                display=`
+                <section class="product-detail">
+                    <div class="photo">
+                        <img src="${contentClick.image}">
+                    </div>
+                    <div class="detail">
+                        <h1> ${contentClick.name}</h1>
+                        <span>Available size</span>
+                        <div class="catalogue-size">
+                            ${displaySize}
+                        </div>
+                        <h3>${contentClick.price}$</h3>
+                        <div class="changethenumber">
+                            <button class="" id="btnup" onclick="increase()">+</button>
+                            <input type="text" id="quantity" value="0" />
+                            <button class="" id="btndown" onclick="decrease()">-</button>
+                        </div>
+                        <button class="btn" id="btn-add-to-cart">Add to cart</button>
+                    </div>
+                </section>
     
     
                 `

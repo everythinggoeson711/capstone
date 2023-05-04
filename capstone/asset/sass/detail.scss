@@ -5,8 +5,8 @@
 body{
     .container{
         .product-detail{position: relative;
-            width: 1280px;
-            height: 530px;
+            width: 1180px;
+            height: 530px;display:flex;flex-direction: column;
             .photo{
                 position: absolute;
                 width: 334px;
@@ -17,14 +17,15 @@ body{
                 img{
                     position: absolute;
                     width: 220px;
-                    height: 156px;
+                    height: 176px;
                     left: 57px;
                     top: 109px;
 
                 }
             }
-            .detail{position: absolute;
-                width: 196px;
+            .detail{
+                position: absolute;
+                width: 300px;
                 height: 36px;
                 left: 527px;
                 top: 67px;
@@ -42,7 +43,7 @@ body{
                 
                         .btnsize{@extend .btnSize;display: block;margin-right: 20px;text-align: center;@include textNormal($fs-2xl,$fw-semibold,$fc-dark,)}
                         }
-                }   
+                   
                 h3{@include textNormal($fs-3xl,$fw-semibold,$fc-red,);margin-top:20px;}
                 .changethenumber{display: flex;
                     #btnup{
@@ -55,7 +56,6 @@ body{
     
                         
                     }
-                    #number{}
                     #btndown{
                         @include textNormal($fs-3xl,$fw-regular ,$fc-light , );
                         @extend .btnUpDown;
@@ -66,7 +66,45 @@ body{
                     @include textNormal($fs-2xl,$fw-medium,$fc-light,);
                     @extend .btnAdd2Cart;
                 }
-            }
+        
+                
+               } 
+               
+                 }
+                 @media only screen and (max-width:768px){
+                    width: 768px   ;position: relative;;
+                    .product-detail{
+                        .photo{
+                            .img{
+                                width: 200px;
+                                height: 150px;
+                            }
+                        }
+                        .detail{
+                            position: absolute;
+                            top: 450px;
+                            left: 30px;width: 100%;
+                            
+                            .catalogue-size{
+                               display: grid;
+                               grid-template-columns: 70px 70px 70px 70px 70px;
+                               grid-template-rows: 70px 70px ;
+                              .btnsize{
+                                margin-top: 10px;
+                                margin-right: 20px;
+                              }
+                             
+                            }
+                            h3{
+                                text-align: start
+                              }
+                              #btn-add-to-cart{}
+                        
+                         }
+                    };                
+             }
+        
         }
 
     }
+    
