@@ -253,3 +253,86 @@ body form .container .btnsubmit {
     margin-left: 0px;
   }
 }
+@media only screen and (max-width: 576px) {
+  body form .container .container {
+    margin-left: 20px;
+  }
+  body form .container .container h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #140101;
+    font-family: "Inter";
+    margin-bottom: 30px;
+  }
+  body form .container .container table .tr-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  body form .container .container table .tr-1 td input {
+    width: 300px;
+    height: 40px;
+  }
+  body form .container .container table .tr-1 td input::placeholder {
+    text-align: center;
+  }
+  body form .container .container table .tr-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  body form .container .container table .tr-2 td input {
+    width: 300px;
+    height: 40px;
+  }
+  body form .container .container table .tr-2 td input::placeholder {
+    text-align: center;
+  }
+  body form .container .container table .tr-2 td p {
+    width: 90%;
+  }
+  body form .container .container table .tr-3 {
+    display: flex;
+    flex-direction: column;
+  }
+  body form .container .container table .tr-3 td:nth-child(1) input {
+    width: 300px;
+    height: 40px;
+  }
+  body form .container .container table .tr-3 td:nth-child(1) input::placeholder {
+    text-align: center;
+  }
+  body form .container .container table .tr-3 td:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 20px;
+  }
+  body form .container .container table .tr-3 td:nth-child(2) .btnrd {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -60px;
+    bottom: -70px;
+  }
+  body form .container .container table .tr-3 td:nth-child(2) .btnrd .buttonRadio {
+    margin-top: 10px;
+  }
+  body form .container .container .btnsubmit {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: "Inter";
+    background: #AE18E2;
+    border: none;
+    border-radius: 0px;
+    width: 291px;
+    height: 50px;
+    transition: background 0.3s;
+  }
+  body form .container .container .btnsubmit:hover {
+    background-color: rgba(196, 134, 237, 0.97);
+    transition: all 0.3s;
+  }
+}

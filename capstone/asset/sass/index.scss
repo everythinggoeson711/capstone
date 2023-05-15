@@ -7,90 +7,155 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    .carousel{  
-        #carouselExampleCaptions{
-            width: 1280px;
-                height: 530px;
-            background-image: url(/capstone/capstone/asset/image/bgred.png);background-repeat: no-repeat;background-size: 1317px 393px;background-position:top 107px left -22px ;position: relative;;
-            .carousel-indicators{position: absolute;bottom:30px;
-                button{
-                    @extend .buttonIndicator;
-                    
-                }
+body {
+    .carousel {
+      #carouselExampleCaptions {
+        width: 1280px;
+        height: 530px;
+        background-image: url(/capstone/capstone/asset/image/bgred.png);
+        background-repeat: no-repeat;
+        background-size: 1317px 393px;
+        background-position: top 107px left -22px;
+        position: relative;
+  
+        .carousel-indicators {
+          position: absolute;
+          bottom: 30px;
+  
+          button {
+            @extend .buttonIndicator;
+          }
+        }
+  
+        .carousel-inner {
+          position: relative;
+          width: 1280px;
+          height: 530px;
+  
+          .carousel-item {
+            img {
+              position: absolute;
+              width: 821px;
+              height: 392px;
+              left: 86px;
+              top: 5px;
             }
-            .carousel-inner{position: relative;
-                width: 1280px;
-                height: 530px;
-                .carousel-item{
-                    img{position: absolute;
-                        width: 821px;
-                        height: 392px;
-                        left: 86px;
-                        top: 5px;   
-                    }
-                    .carousel-caption{position: absolute;
-                        width: 291px;
-                        height: 51px;
-                        left: 930px;
-                        top: 95px;
-                        h5{ @include textNormal($fs-4xl,$fw-normal,$fc-dark,)}
-                        p{
-                        padding-right: 72px;
-                        @include textNormal($fs-xl,$fw-normal,$fc-dark,)}
-                        .btn-buy{
-                            margin-right: 110px;
-                            margin-top:12px;
-                            @include textNormal($fs-xl,$fw-normal,$fc-light,); 
-                           @extend .buttonBuy ;
-                        }
-                    }
-                }
+  
+            .carousel-caption {
+              position: absolute;
+              width: 291px;
+              height: 51px;
+              left: 930px;
+              top: 95px;
+  
+              h5 {
+                @include textNormal($fs-4xl, $fw-normal, $fc-dark);
+              }
+  
+              p {
+                padding-right: 72px;
+                @include textNormal($fs-xl, $fw-normal, $fc-dark);
+              }
+  
+              .btn-buy {
+                margin-right: 110px;
+                margin-top: 12px;
+                @include textNormal($fs-xl, $fw-normal, $fc-light);
+                @extend .buttonBuy;
+              }
             }
-            .carousel-control-prev{
-                .carousel-control-prev-icon{
-                    background-image: none;
-                    @extend .trianglePrev;
-                    background-color: lightgoldenrodyellow;
-                }
+          }
+        }
+  
+        .carousel-control-prev {
+          .carousel-control-prev-icon {
+            background-image: none;
+            @extend .trianglePrev;
+            background-color: lightgoldenrodyellow;
+          }
+        }
+  
+        .carousel-control-next {
+          .carousel-control-next-icon {
+            background-image: none;
+            @extend .triangleNext;
+            background-color: lightgoldenrodyellow;
+          }
+        }
+      }
+    }
+  
+    @media only screen and (max-width: 768px) {
+      width: 768px;
+  
+      .carousel {
+        #carouselExampleCaptions {
+          width: 768px;
+  
+          .carousel-inner {
+            .carousel-item {
+              position: relative;
+  
+              img {
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                top: 70px;
+                left: 150px;
+              }
+  
+              .carousel-caption {
+                position: absolute;
+                left: 0;
+                top: 30px;
+              }
             }
-            .carousel-control-next{
-                .carousel-control-next-icon{background-image: none;
-                    @extend .triangleNext;
-                    background-color: lightgoldenrodyellow;}
+  
+            .carousel-control-next,
+            .carousel-control-prev {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  
+    @media only screen and (max-width: 576px) {
+      width: 576px;
+  
+      .carousel {
+        #carouselExampleCaptions {
+          width: 576px;
+  
+          .carousel-inner {
+            .carousel-item {
+              position: relative;
+  
+              img {
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                top: 70px;
+                left: 90px;
+              }
+  
+              .carousel-caption {
+                position: absolute;
+                left: 0;
+                top: 30px;
+              }
+            }
+  
+            .carousel-control-next,
+            .carousel-control-prev {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  
+    .collection {
     
-                    
-            }
-        
-        }    
-       
-    }
-    @media only screen and (max-width:768px) {
-            width:768px;
-            .carousel{
-               #carouselExampleCaptions{width:768px;
-                    .carousel-inner{
-                        .carousel-item{position: relative;
-                            img{width: fit-content;
-                            height: fit-content;
-                        position: absolute;
-                    top:70px;left:150px}
-                                .carousel-caption{
-                                    position: absolute;
-                                    left:0;
-                                    top:30px
-                                }
-                        }
-                        .carousel-control-next,.carousel-control-prev{
-                            display: none;
-                        }
-                    }
-               }
-            }
-           
-    }
-    .collection{
-
-    }
-    
+  }
 }

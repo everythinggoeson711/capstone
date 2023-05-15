@@ -161,7 +161,35 @@ body .carousel #carouselExampleCaptions .carousel-control-next .carousel-control
     left: 0;
     top: 30px;
   }
-  body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-next, body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-prev {
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-next,
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-prev {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body {
+    width: 576px;
+  }
+  body .carousel #carouselExampleCaptions {
+    width: 576px;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-item {
+    position: relative;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-item img {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 70px;
+    left: 90px;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-next,
+  body .carousel #carouselExampleCaptions .carousel-inner .carousel-control-prev {
     display: none;
   }
 }

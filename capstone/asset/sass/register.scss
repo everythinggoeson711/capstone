@@ -10,7 +10,7 @@ box-sizing: border-box;}
 
 body{   
     form{
-        .container{text-align: center   ;
+        .container{text-align: center;
             h1{ 
                 @include textNormal($fs-4xl,$fw-regular,$fc-dark,);margin-bottom: 40px;
             }
@@ -100,9 +100,6 @@ body{
             
                 
             }
-            @media only screen and (max-width:576px) {
-                
-            }
         }
             .btnsubmit{ 
                 margin-left:240px;
@@ -113,7 +110,96 @@ body{
                     margin-top: 100px;
                     margin-left: 0px;
                 }
-            }}
+            }
+            @media only screen and (max-width: 576px) {
+                .container {
+                  margin-left: 20px;
+              
+                  h1 {
+                    @include textNormal($fs-3xl, $fw-regular, $fc-dark);
+                    margin-bottom: 30px;
+                  }
+              
+                  table {
+                    .tr-1 {
+                      display: flex;
+                      flex-direction: column;
+              
+                      td {
+                        input {
+                          @include inputResponsive;
+                        }
+                      }
+                    }
+              
+                    .tr-2 {
+                      display: flex;
+                      flex-direction: column-reverse;
+              
+                      td {
+                        input {
+                          @include inputResponsive;
+                        }
+              
+                        p {
+                          width: 90%;
+                        }
+                      }
+                    }
+              
+                    .tr-3 {
+                      display: flex;
+                      flex-direction: column;
+              
+                      td:nth-child(1) {
+                        input {
+                          @include inputResponsive;
+                        }
+                      }
+              
+                      td:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        padding-top: 20px;
+              
+                        .btnrd {
+                          display: flex;
+                          flex-direction: column;
+                          position: absolute;
+                          left: -60px;
+                          bottom: -70px;
+              
+                          .buttonRadio {
+                            margin-top: 10px;
+                          }
+                        }
+                      }
+                    }
+                  }
+              
+                  .btnsubmit {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 40px;
+              
+                    @include textNormal($fs-3xl, $fw-regular, $fc-light);
+                   background: $bg-purple;
+    border: none;
+    border-radius: 0px;
+    width: 291px;
+    height: 50px;
+    transition: background 0.3s;
+    &:hover{
+        background-color:rgba(196, 134, 237, 0.97) ;
+        transition: all 0.3s;
+    }
+                  }
+                }
+              }
+              
+        }
 }
     }
            
+
